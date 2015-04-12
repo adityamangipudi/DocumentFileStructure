@@ -3,105 +3,33 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Document File</title>
-    <style>
-        *{
-            margin:0;
-            padding:0;
-        }
-        html, body{
-            margin:0;
-            font: 300 1em 'Helvetica Neue';
-            height:100%;
+    <link rel="stylesheet" type="text/css" href="DocumentFile.css">
 
-        }
-        div.file-structure{
-            width:30%;
-            height:100%;
-            background-color: #e9eeee;
-            border:1px solid azure;
-        }
-        /*div.document{
-                     width:70%;
-                     height:100%;
-                    left:300px;
-                     background-color: lavenderblush;
-                     border:1px solid lavender;
-        }*/
-
-        .contextmenu{
-            top:0;
-            left:0;
-            display:none;
-
-            position:fixed;
-            list-style-type: none;
-            background-color: #ffe2a2;
-            padding:0.25em 0.25em;
-            border:1px solid black;
-
-        }
-
-        ul.contextmenu > li {
-            font-size: 0.95em;
-            padding: 0.2em 0.4em;
-        }
-        ul.contextmenu > li:hover {
-            background-color: #bd7116;
-            cursor: pointer;
-            color: white;
-            transition: all 500ms ease;
-        }
-        .classBlock{
-            display: block;
-        }
-    </style>
-    <script>
-        function Data() {
-            this.data = [];
-        }
-        Data.prototype.addDocument = function (folder) {
-            var identifier = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-                var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
-                return v.toString(16);
-            });
-        };
-        document.addEventListener('DOMContentLoaded', function(){
-            var ul = document.querySelector('ul');
-            function fn(event){
-                if(event.clientX)
-                event.preventDefault();
-
-                ul.style.top = event.clientY+'px';
-                ul.style.left = event.clientX+'px';
-                ul.className='contextmenu classBlock';
-               // ul.style.visibility='visible';
-            }
-            document.querySelector('div.file-structure').addEventListener('contextmenu', fn,false);
-            document.body.addEventListener('click', function () {
-                ul.className='contextmenu';
-            });
-
-            var lidoc = document.querySelector('newdoc');
-            var lifolder = document.querySelector('newfolder');
-
-            lidoc.addEventListener('click',function(event){});
-            lifolder.addEventListener('click',function(event){});
-
-
-
-        });
-    </script>
 </head>
 <body>
-<div class = "file-structure">
-    <ul class="contextmenu">
-        <li id="newdoc">New Document</li>
-        <li id="newfolder">New Folder</li>
-    </ul>
-</div>
-<div class ="document">
+<div class="template">
+    <div class = "file-structure">
+        <ul class="contextmenu">
+            <li class = "cm" id="newdoc">New Document</li>
+            <li class = "cm" id="newfolder">New Folder</li>
+        </ul>
+        <ul class="filedoc-list">
 
+        </ul>
+    </div>
+    <div class ="document">
+        <div class = "doc-title"><h1><span>Document Title</span></h1>
+
+        </div>
+        <textarea>
+
+        </textarea>
+
+    </div>
 </div>
 
+<script src="DoumentFile.js">
+
+</script>
 </body>
 </html>

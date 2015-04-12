@@ -1,0 +1,79 @@
+*{
+    margin:0;
+    padding:0;
+}
+html, body{
+    margin:0;
+    font: 300 1em 'Helvetica Neue';
+    height:100%;
+
+}
+div.template{
+    width: 100%;
+    height: 100%;
+
+
+}
+div.file-structure>ol{
+    margin-left: 7%;
+
+}
+div.file-structure{
+    width:34%;
+    height:100%;
+    background-color: #e9eeee;
+    border:1px solid azure;
+    float:left;
+
+}
+div.document{
+    width:65%;
+    height:100%;
+    background-color: black;
+    border:1% solid lavender;
+    color:white;
+    float: right;
+
+}
+span{
+    margin-left: 10px;
+}
+
+.contextmenu{
+    top:0;
+    left:0;
+    display:none;
+
+    position:fixed;
+    list-style-type: none;
+    background-color: #ffe2a2;
+    padding:0.25em 0.25em;
+    border:1px solid black;
+
+}
+
+ul.contextmenu > li {
+    font-size: 0.95em;
+    padding: 0.2em 0.4em;
+}
+ul.contextmenu > li:hover {
+    background-color: #bd7116;
+    cursor: pointer;
+    color: white;
+    transition: all 500ms ease;
+}
+.classBlock{
+    display: block;
+}
+textarea{
+    width: 100%;
+    height: 100%;
+}
+ul.filedoc-list{
+    margin-left: 10%;
+    list-style:square;
+}
+li.folder:hover{
+    color:blue;
+}
+
